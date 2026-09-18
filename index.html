@@ -58,14 +58,18 @@ h2.titulo{font-size:clamp(44px,6.2vw,92px)}
 .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1280px,calc(100% - 28px));z-index:50;
   display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 14px 12px 26px;border-radius:100px;
   background:rgba(11,10,9,.55);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--linea)}
-.marca{font-family:var(--serif);font-size:22px;letter-spacing:.02em;white-space:nowrap}
-.marca small{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--champ);margin-left:10px;text-transform:uppercase}
+.marca{display:inline-flex;flex-direction:column;align-items:stretch;line-height:1;white-space:nowrap;padding:2px 0}
+.marca-n{font-family:var(--serif);font-weight:400;font-size:33px;letter-spacing:.015em;color:var(--crema)}
+.marca-n em{font-weight:300;background:linear-gradient(180deg,#F3E6C4 15%,#CFB787 60%,#A8864A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.marca-l{display:flex;align-items:center;gap:10px;margin-top:6px;font-family:var(--sans);font-weight:400;font-size:10.5px;letter-spacing:.72em;text-transform:uppercase;color:var(--champ);padding-left:.72em}
+.marca-l::before,.marca-l::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(207,183,135,.6))}
+.marca-l::after{background:linear-gradient(270deg,transparent,rgba(207,183,135,.6))}
 .nav ul{display:flex;gap:26px;list-style:none;font-size:14px;letter-spacing:.05em}
 .nav ul a{opacity:.75;transition:opacity .2s,color .2s}
 .nav ul a:hover{opacity:1;color:var(--champ)}
 .nav .btn{padding:11px 20px;font-size:13px}
 @media(max-width:1020px){.nav ul{display:none}}
-@media(max-width:560px){.marca small{display:none}.nav .btn span.largo{display:none}}
+@media(max-width:560px){.marca-n{font-size:22px}.marca-l{font-size:8px;letter-spacing:.55em;margin-top:5px}.nav .btn span.largo{display:none}}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
@@ -460,7 +464,7 @@ footer{padding:70px 0 50px;background:var(--ink);border-top:1px solid var(--line
 
 <!-- NAV -->
 <nav class="nav">
-  <a class="marca" href="#">Estudio de Movimiento<small>Serie Consciente</small></a>
+  <a class="marca" href="#" aria-label="Estudio de Movimiento, Tenerife"><span class="marca-n">Estudio de <em>Movimiento</em></span><span class="marca-l">Tenerife</span></a>
   <ul>
     <li><a href="#pieza">La pieza</a></li>
     <li><a href="#sistema">El sistema</a></li>
