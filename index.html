@@ -72,7 +72,7 @@ h2.titulo{font-size:clamp(44px,6.2vw,92px)}
   background:radial-gradient(ellipse 48% 62% at 74% 48%,#3a2c1d 0%,#1a1410 45%,var(--ink) 78%)}
 .hero-img{position:absolute;inset:0;background:url(img/tg-sala.jpg) center 40%/cover;filter:saturate(.5) brightness(.3) blur(2px);opacity:.35;transform:scale(1.08)}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,10,9,.92) 0%,rgba(11,10,9,.55) 45%,rgba(11,10,9,0) 70%),linear-gradient(0deg,var(--ink) 3%,transparent 35%)}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding-top:118px;padding-bottom:40px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.15fr .5fr;gap:34px;align-items:center;padding-top:118px;padding-bottom:40px;max-width:1560px}
 .hero-txt{display:flex;flex-direction:column;align-items:flex-start}
 .emblema{position:relative;width:min(190px,40vw);aspect-ratio:1400/1351;margin-bottom:22px;
   filter:drop-shadow(0 1px 0 rgba(255,244,214,.55)) drop-shadow(0 -1px 0 rgba(0,0,0,.9)) drop-shadow(0 24px 40px rgba(0,0,0,.7))}
@@ -101,11 +101,11 @@ h2.titulo{font-size:clamp(44px,6.2vw,92px)}
 .marca-f span{font-size:13.5px;color:rgba(245,241,234,.55)}
 .hero .acciones{display:flex;flex-wrap:wrap;gap:14px;animation:aparece 1.4s 1.9s both}
 @keyframes aparece{from{opacity:0}to{opacity:1}}
-.hero-maq{position:relative;display:flex;justify-content:center;align-items:center;min-height:640px;animation:maq 1.8s .4s cubic-bezier(.2,.8,.2,1) both}
+.hero-maq{position:relative;display:flex;justify-content:center;align-items:center;min-height:720px;animation:maq 1.8s .4s cubic-bezier(.2,.8,.2,1) both}
 @keyframes maq{from{opacity:0;transform:translateX(40px) scale(.96)}to{opacity:1;transform:none}}
 .hero-maq::before{content:"";position:absolute;width:115%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(233,219,187,.22) 0%,rgba(207,183,135,.08) 38%,transparent 66%)}
 .hero-maq::after{content:"";position:absolute;bottom:2%;width:78%;height:40px;border-radius:50%;background:radial-gradient(rgba(0,0,0,.75),transparent 70%);filter:blur(6px)}
-.hero-maq img{position:relative;z-index:1;width:min(520px,100%);height:auto;
+.hero-maq img{position:relative;z-index:1;width:min(660px,112%);max-width:none;height:auto;
   filter:drop-shadow(-1px -1px 0 rgba(255,240,210,.18)) drop-shadow(0 50px 60px rgba(0,0,0,.75)) drop-shadow(28px 20px 40px rgba(0,0,0,.5)) contrast(1.06) saturate(1.08);
   transform:perspective(1600px) rotateY(-9deg);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
 .hero-maq:hover img{transform:perspective(1600px) rotateY(-3deg) scale(1.01)}
@@ -116,6 +116,18 @@ h2.titulo{font-size:clamp(44px,6.2vw,92px)}
 .nota-m.n1{top:21%;right:2%;flex-direction:row-reverse}.nota-m.n1::after{background:linear-gradient(270deg,var(--champ),transparent)}
 .nota-m.n2{top:48%;left:-6%}
 .nota-m.n3{bottom:16%;right:0;flex-direction:row-reverse}.nota-m.n3::after{background:linear-gradient(270deg,var(--champ),transparent)}
+.marcas{display:flex;flex-direction:column;gap:0;align-self:center;animation:aparece 1.4s 1.7s both;border-left:1px solid var(--linea);padding-left:30px}
+.marcas .tit{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(245,241,234,.45);margin-bottom:10px}
+.marcas .m{padding:30px 0 28px;border-bottom:1px solid var(--linea);display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.marcas .m img.tg{height:46px;margin-bottom:12px}
+.marcas .m img.po{height:30px;margin:8px 0 16px}
+.marcas .an{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-weight:500;font-size:30px;letter-spacing:.01em;color:var(--crema);margin-bottom:10px}
+.marcas .an img{height:38px}
+.marcas .m b{font-weight:400;font-size:16px;color:var(--crema)}
+.marcas .m span{font-size:13.5px;color:rgba(245,241,234,.55);line-height:1.4}
+.marcas .union{margin-top:26px;font-size:14px;color:rgba(245,241,234,.55);line-height:1.4}
+.marcas .union em{font-family:var(--serif);font-size:30px;color:var(--lila)}
+@media(max-width:1180px){.hero-grid{grid-template-columns:1fr 1fr}.marcas{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:0 40px;border-left:0;padding-left:0;border-top:1px solid var(--linea)}.marcas .tit{width:100%;margin:16px 0 0}.marcas .m{border-bottom:0;flex:1;min-width:180px}.marcas .union{width:100%;margin-top:6px}}
 @media(max-width:980px){
   .hero-grid{grid-template-columns:1fr;padding-top:104px}
   .hero-maq{min-height:0;order:-1;margin:0 auto -10px;max-width:420px}
@@ -472,13 +484,6 @@ footer{padding:70px 0 50px;background:var(--ink);border-top:1px solid var(--line
       <span class="rotulo">Milagro Ortiz · Estudio de Movimiento presenta</span>
       <h1 class="titulo">Serie <em>Consciente</em></h1>
       <p class="lema">Instrumental de lujo, inteligencia artificial y eutonía.<br><em>La IA al servicio de unir la conciencia con el movimiento.</em></p>
-      <div class="alianza">
-        <span class="tit">Construido con</span>
-        <div class="marca-f"><div class="logo tg"><img src="img/logo-technogym.svg" alt="Technogym"></div><div><b>Instrumental de lujo</b><span>Kinesis Personal, diseño italiano</span></div></div>
-        <div class="marca-f"><div class="logo po"><img src="img/logo-polar.svg" alt="Polar"></div><div><b>Medición del cuerpo</b><span>Banda Polar H10: pulso y variabilidad</span></div></div>
-        <div class="marca-f"><div class="logo an"><img src="img/logo-claude.svg" alt="">Anthropic</div><div><b>Inteligencia artificial</b><span>Claude lee la sesión y elige la rutina</span></div></div>
-        <div class="marca-f"><div class="logo mo">Milagro Ortiz</div><div><b>Eutonía aplicada</b><span>El método que devuelve al cuerpo</span></div></div>
-      </div>
       <div class="acciones">
         <a class="btn btn-oro" href="#pieza">Descubrir la pieza Nº 01 <span class="flecha">↓</span></a>
         <a class="btn btn-linea" href="#sistema">Cómo funciona <span class="flecha">→</span></a>
@@ -490,6 +495,13 @@ footer{padding:70px 0 50px;background:var(--ink);border-top:1px solid var(--line
       <span class="nota-m n2"><i></i>Panel Heritage Black</span>
       <span class="nota-m n3"><i></i>Acero pulido</span>
     </div>
+    <aside class="marcas" aria-label="Construido con">
+      <span class="tit">Construido con</span>
+      <div class="m"><img class="tg" src="img/logo-technogym.svg" alt="Technogym"><b>Instrumental de lujo</b><span>Kinesis Personal, diseño italiano</span></div>
+      <div class="m"><img class="po" src="img/logo-polar.svg" alt="Polar"><b>Medición del cuerpo</b><span>Banda H10: pulso y variabilidad</span></div>
+      <div class="m"><div class="an"><img src="img/logo-claude.svg" alt="">Anthropic</div><b>Inteligencia artificial</b><span>Claude lee la sesión y elige la rutina</span></div>
+      <p class="union">unidas por la eutonía de<br><em>Milagro Ortiz</em></p>
+    </aside>
   </div>
   <div class="serie">
     <div class="envoltura">
