@@ -68,32 +68,62 @@ h2.titulo{font-size:clamp(44px,6.2vw,92px)}
 @media(max-width:560px){.marca small{display:none}.nav .btn span.largo{display:none}}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;background:url(img/tg-sala.jpg) center 40%/cover;transform:scale(1.12);animation:respira 18s ease-in-out infinite alternate;filter:saturate(.7) brightness(.42)}
-@keyframes respira{to{transform:scale(1.02) translateY(-1%)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:
-  radial-gradient(ellipse 55% 55% at 50% 38%,rgba(40,30,20,.15) 0%,rgba(11,10,9,.55) 60%,rgba(11,10,9,.95) 100%),
-  linear-gradient(0deg,var(--ink) 4%,transparent 45%)}
-.hero-cont{position:relative;z-index:2;padding-top:120px;padding-bottom:50px;text-align:center;display:flex;flex-direction:column;align-items:center}
-.emblema{position:relative;width:min(300px,56vw);aspect-ratio:1400/1351;margin-bottom:26px;
-  filter:drop-shadow(0 1px 0 rgba(255,244,214,.55)) drop-shadow(0 -1px 0 rgba(0,0,0,.9)) drop-shadow(0 30px 50px rgba(0,0,0,.7))}
-.emblema::before{content:"";position:absolute;inset:-18%;border-radius:50%;background:radial-gradient(circle,rgba(207,183,135,.22),transparent 62%);animation:aparece 2.4s .3s both}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
+  background:radial-gradient(ellipse 48% 62% at 74% 48%,#3a2c1d 0%,#1a1410 45%,var(--ink) 78%)}
+.hero-img{position:absolute;inset:0;background:url(img/tg-sala.jpg) center 40%/cover;filter:saturate(.5) brightness(.3) blur(2px);opacity:.35;transform:scale(1.08)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,10,9,.92) 0%,rgba(11,10,9,.55) 45%,rgba(11,10,9,0) 70%),linear-gradient(0deg,var(--ink) 3%,transparent 35%)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding-top:118px;padding-bottom:40px}
+.hero-txt{display:flex;flex-direction:column;align-items:flex-start}
+.emblema{position:relative;width:min(190px,40vw);aspect-ratio:1400/1351;margin-bottom:22px;
+  filter:drop-shadow(0 1px 0 rgba(255,244,214,.55)) drop-shadow(0 -1px 0 rgba(0,0,0,.9)) drop-shadow(0 24px 40px rgba(0,0,0,.7))}
+.emblema::before{content:"";position:absolute;inset:-22%;border-radius:50%;background:radial-gradient(circle,rgba(207,183,135,.2),transparent 62%);animation:aparece 2.4s .3s both}
 .emblema .anillo{position:absolute;inset:0;width:100%;animation:anillo 2.2s cubic-bezier(.2,.8,.2,1) both}
 .emblema .nombre{position:absolute;left:50%;top:50%;width:84%;transform:translate(-50%,-50%);animation:nombre 1.6s .9s both}
 @keyframes anillo{from{opacity:0;transform:rotate(-70deg) scale(.86)}to{opacity:1;transform:none}}
 @keyframes nombre{from{opacity:0;transform:translate(-50%,-38%);filter:blur(6px)}to{opacity:1;transform:translate(-50%,-50%);filter:none}}
-.hero .rotulo{display:inline-flex;align-items:center;gap:14px;animation:aparece 1.2s 1.2s both}
-.hero .rotulo::before,.hero .rotulo::after{content:"";width:42px;height:1px;background:var(--champ)}
-.hero h1{font-size:clamp(64px,10.5vw,168px);margin:14px 0 8px;letter-spacing:-.015em;animation:aparece 1.4s 1.4s both}
+.hero .rotulo{display:inline-flex;align-items:center;gap:14px;animation:aparece 1.2s 1.1s both}
+.hero .rotulo::before{content:"";width:42px;height:1px;background:var(--champ)}
+.hero h1{font-size:clamp(58px,8vw,128px);margin:12px 0 10px;letter-spacing:-.015em;animation:aparece 1.4s 1.3s both}
 .hero h1 em{background:linear-gradient(180deg,#F3E6C4 10%,#CFB787 55%,#9C7A3E);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lema{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.4vw,32px);line-height:1.3;color:rgba(245,241,234,.86);max-width:860px;animation:aparece 1.4s 1.6s both}
+.lema{font-family:var(--serif);font-weight:300;font-size:clamp(21px,2vw,28px);line-height:1.3;color:rgba(245,241,234,.86);max-width:620px;animation:aparece 1.4s 1.5s both}
 .lema em{color:var(--champ-2)}
-.nucleos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:30px 0 34px;animation:aparece 1.4s 1.8s both}
-.nucleos span{padding:11px 20px;border-radius:100px;border:1px solid rgba(207,183,135,.4);background:rgba(11,10,9,.45);backdrop-filter:blur(8px);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--champ-2)}
-.nucleos span.v{border-color:rgba(138,117,150,.7);color:var(--lila)}
-.nucleos i{font-style:normal;color:var(--champ);font-family:var(--serif);font-size:24px}
-.hero .acciones{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;animation:aparece 1.4s 2s both}
+.alianza{margin:30px 0 32px;width:100%;max-width:560px;border-top:1px solid var(--linea);animation:aparece 1.4s 1.7s both}
+.alianza .tit{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,241,234,.45);padding:14px 0 6px}
+.marca-f{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:22px;padding:14px 0;border-bottom:1px solid var(--linea)}
+.marca-f .logo{height:30px;display:flex;align-items:center}
+.marca-f .logo img{max-height:100%;max-width:140px}
+.marca-f .logo.tg img{height:30px}
+.marca-f .logo.po img{height:20px}
+.marca-f .logo.an{gap:10px;font-family:var(--sans);font-weight:500;font-size:19px;letter-spacing:.02em;color:var(--crema)}
+.marca-f .logo.an img{height:26px}
+.marca-f .logo.mo{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--lila)}
+.marca-f b{display:block;font-weight:400;font-size:15.5px}
+.marca-f span{font-size:13.5px;color:rgba(245,241,234,.55)}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:14px;animation:aparece 1.4s 1.9s both}
 @keyframes aparece{from{opacity:0}to{opacity:1}}
+.hero-maq{position:relative;display:flex;justify-content:center;align-items:center;min-height:640px;animation:maq 1.8s .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes maq{from{opacity:0;transform:translateX(40px) scale(.96)}to{opacity:1;transform:none}}
+.hero-maq::before{content:"";position:absolute;width:115%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(233,219,187,.22) 0%,rgba(207,183,135,.08) 38%,transparent 66%)}
+.hero-maq::after{content:"";position:absolute;bottom:2%;width:78%;height:40px;border-radius:50%;background:radial-gradient(rgba(0,0,0,.75),transparent 70%);filter:blur(6px)}
+.hero-maq img{position:relative;z-index:1;width:min(520px,100%);height:auto;
+  filter:drop-shadow(-1px -1px 0 rgba(255,240,210,.18)) drop-shadow(0 50px 60px rgba(0,0,0,.75)) drop-shadow(28px 20px 40px rgba(0,0,0,.5)) contrast(1.06) saturate(1.08);
+  transform:perspective(1600px) rotateY(-9deg);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.hero-maq:hover img{transform:perspective(1600px) rotateY(-3deg) scale(1.01)}
+.nota-m{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;padding:7px 12px;border-radius:100px;background:rgba(11,10,9,.78);backdrop-filter:blur(6px);border:1px solid var(--linea);font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--champ-2);white-space:nowrap}
+.nota-m i{width:9px;height:9px;border-radius:50%;background:var(--champ);box-shadow:0 0 0 5px rgba(207,183,135,.2);animation:late2 2.4s infinite}
+@keyframes late2{50%{box-shadow:0 0 0 10px rgba(207,183,135,0)}}
+.nota-m::after{content:"";width:46px;height:1px;background:linear-gradient(90deg,var(--champ),transparent)}
+.nota-m.n1{top:21%;right:2%;flex-direction:row-reverse}.nota-m.n1::after{background:linear-gradient(270deg,var(--champ),transparent)}
+.nota-m.n2{top:48%;left:-6%}
+.nota-m.n3{bottom:16%;right:0;flex-direction:row-reverse}.nota-m.n3::after{background:linear-gradient(270deg,var(--champ),transparent)}
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;padding-top:104px}
+  .hero-maq{min-height:0;order:-1;margin:0 auto -10px;max-width:420px}
+  .hero-maq img{width:78%;transform:none}
+  .nota-m{display:none}
+  .emblema{width:150px}
+}
+@media(max-width:520px){.marca-f{grid-template-columns:118px 1fr;gap:14px}.marca-f .logo.tg img{height:24px}.marca-f .logo.an{font-size:16px}}
 .serie{position:relative;z-index:2;border-top:1px solid var(--linea);background:linear-gradient(0deg,rgba(11,10,9,.95),rgba(11,10,9,.55));backdrop-filter:blur(6px)}
 .serie .envoltura{display:grid;grid-template-columns:auto repeat(3,1fr);align-items:stretch}
 .serie-tit{padding:24px 30px 24px 0;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--linea)}
@@ -255,7 +285,7 @@ h2.titulo{font-size:clamp(44px,6.2vw,92px)}
 .eutonia .bajada{color:rgba(245,241,234,.8)}
 .pluma{margin:70px 0;border-radius:26px;overflow:hidden;height:260px;position:relative}
 .pluma img{width:100%;height:100%;object-fit:cover;filter:saturate(.7)}
-.pluma blockquote{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(90deg,rgba(96,80,104,.85),rgba(96,80,104,.35),rgba(96,80,104,.85));font-family:var(--serif);font-size:clamp(28px,3.6vw,50px);font-weight:300;line-height:1.1}
+.pluma blockquote{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(90deg,rgba(96,80,104,.85),rgba(96,80,104,.35),rgba(96,80,104,.85));font-family:var(--serif);font-size:clamp(28px,3.6vw,50px);font-weight:300;line-height:1.1}
 .pluma blockquote em{color:var(--lila)}
 .rutinas{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .rut{padding:30px 26px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);transition:background .3s,transform .3s}
@@ -376,7 +406,7 @@ h2.titulo{font-size:clamp(44px,6.2vw,92px)}
 .plan li::before{content:"✦";color:var(--champ);font-size:12px;margin-top:4px}
 .plan .btn{justify-content:center}
 .referencia{text-align:center;margin-top:34px;font-size:14px;color:rgba(245,241,234,.5)}
-@media(max-width:860px){.planes{grid-template-columns:1fr}}
+@media(max-width:860px){.planes{grid-template-columns:1fr}.plan{padding:36px 28px}.precio{font-size:44px}}
 
 /* ---------- FAQ ---------- */
 .faq{padding:130px 0;background:var(--noche)}
@@ -432,19 +462,33 @@ footer{padding:70px 0 50px;background:var(--ink);border-top:1px solid var(--line
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-img" role="img" aria-label="Kinesis Personal Heritage Black en un salón"></div>
-  <div class="hero-cont envoltura">
-    <div class="emblema" aria-label="Milagro Ortiz">
-      <img class="anillo" src="img/anillo-oro.png" alt="">
-      <img class="nombre" src="img/firma-oro.png" alt="Milagro Ortiz">
+  <div class="hero-img" aria-hidden="true"></div>
+  <div class="hero-grid envoltura">
+    <div class="hero-txt">
+      <div class="emblema" aria-label="Milagro Ortiz">
+        <img class="anillo" src="img/anillo-oro.png" alt="">
+        <img class="nombre" src="img/firma-oro.png" alt="Milagro Ortiz">
+      </div>
+      <span class="rotulo">Milagro Ortiz · Estudio de Movimiento presenta</span>
+      <h1 class="titulo">Serie <em>Consciente</em></h1>
+      <p class="lema">Instrumental de lujo, inteligencia artificial y eutonía.<br><em>La IA al servicio de unir la conciencia con el movimiento.</em></p>
+      <div class="alianza">
+        <span class="tit">Construido con</span>
+        <div class="marca-f"><div class="logo tg"><img src="img/logo-technogym.svg" alt="Technogym"></div><div><b>Instrumental de lujo</b><span>Kinesis Personal, diseño italiano</span></div></div>
+        <div class="marca-f"><div class="logo po"><img src="img/logo-polar.svg" alt="Polar"></div><div><b>Medición del cuerpo</b><span>Banda Polar H10: pulso y variabilidad</span></div></div>
+        <div class="marca-f"><div class="logo an"><img src="img/logo-claude.svg" alt="">Anthropic</div><div><b>Inteligencia artificial</b><span>Claude lee la sesión y elige la rutina</span></div></div>
+        <div class="marca-f"><div class="logo mo">Milagro Ortiz</div><div><b>Eutonía aplicada</b><span>El método que devuelve al cuerpo</span></div></div>
+      </div>
+      <div class="acciones">
+        <a class="btn btn-oro" href="#pieza">Descubrir la pieza Nº 01 <span class="flecha">↓</span></a>
+        <a class="btn btn-linea" href="#sistema">Cómo funciona <span class="flecha">→</span></a>
+      </div>
     </div>
-    <span class="rotulo">Milagro Ortiz · Estudio de Movimiento presenta</span>
-    <h1 class="titulo">Serie <em>Consciente</em></h1>
-    <p class="lema">Instrumental de lujo, inteligencia artificial y eutonía.<br><em>La IA al servicio de unir la conciencia con el movimiento.</em></p>
-    <div class="nucleos"><span>Instrumental de lujo</span><i>×</i><span>Inteligencia artificial</span><i>×</i><span class="v">Eutonía</span></div>
-    <div class="acciones">
-      <a class="btn btn-oro" href="#pieza">Descubrir la pieza Nº 01 <span class="flecha">↓</span></a>
-      <a class="btn btn-linea" href="#sistema">Cómo funciona <span class="flecha">→</span></a>
+    <div class="hero-maq">
+      <img src="img/kinesis-recorte.webp" alt="Kinesis Personal Heritage Black de frente: panel negro y barras de roble americano">
+      <span class="nota-m n1"><i></i>Roble americano</span>
+      <span class="nota-m n2"><i></i>Panel Heritage Black</span>
+      <span class="nota-m n3"><i></i>Acero pulido</span>
     </div>
   </div>
   <div class="serie">
@@ -671,7 +715,7 @@ footer{padding:70px 0 50px;background:var(--ink);border-top:1px solid var(--line
       </div>
       <p class="bajada rev d2">Eutonía significa «tono armonioso». Es una pedagogía del cuerpo creada por Gerda Alexander: aprender a sentir el peso, el apoyo y la tensión de cada músculo para moverse con el esfuerzo necesario, ni más ni menos.</p>
     </div>
-    <div class="pluma rev"><img src="img/pluma.jpg" alt=""><blockquote>La eutonía la escribe Milagro.<br><em>La inteligencia artificial solo elige y ordena.</em></blockquote></div>
+    <div class="pluma rev"><img src="img/pluma.jpg" alt=""><blockquote><span>La eutonía la escribe Milagro.</span><em>La inteligencia artificial solo elige y ordena.</em></blockquote></div>
     <div class="rutinas">
       <div class="rut rev"><b>Suelo</b><p>Sentir los apoyos después de empujar. El cuerpo vuelve a descansar en su propio peso.</p><span>Tras fuerza de tren inferior</span></div>
       <div class="rut rev d1"><b>Fascia</b><p>Soltar lo que el esfuerzo apretó, recorriendo el cuerpo por dentro sin forzar.</p><span>Tras tracciones y torsiones</span></div>
@@ -822,7 +866,7 @@ footer{padding:70px 0 50px;background:var(--ink);border-top:1px solid var(--line
           <li>Kinesis Personal Heritage, trasladada e instalada</li>
           <li>Sistema consciente: sensores, cámara y programa</li>
           <li>Biblioteca de rutinas de eutonía con audios</li>
-          <li>Manual impreso y caja de la Edición Nº 01</li>
+          <li>Manual impreso y caja de la pieza Nº 01</li>
           <li>Puesta en marcha y formación del equipo</li>
           <li>Cupos de huéspedes en el estudio de Milagro</li>
         </ul>
@@ -882,7 +926,7 @@ footer{padding:70px 0 50px;background:var(--ink);border-top:1px solid var(--line
       <div>Estudio de Movimiento · Milagro Ortiz<br>Pilates &amp; Eutonía Aplicada · Las Caletillas, Candelaria, Tenerife</div>
       <a href="https://estudiodemovimiento.com">estudiodemovimiento.com</a>
     </div>
-    <p class="legal">Boceto de concepto, 18 de septiembre de 2026 — no publicar. Imágenes de producto de Technogym, de uso provisional interno. Technogym, Kinesis y FullGravity son marcas de Technogym S.p.A. El sistema consciente se muestra como simulación del prototipo en desarrollo.</p>
+    <p class="legal">Boceto de concepto, 18 de septiembre de 2026 — no publicar. Imágenes de producto de Technogym, de uso provisional interno. Technogym, Kinesis y FullGravity son marcas de Technogym S.p.A.; Polar, de Polar Electro Oy; Anthropic y Claude, de Anthropic PBC. Se citan como tecnologías del prototipo, sin afiliación ni patrocinio. El sistema consciente se muestra como simulación del prototipo en desarrollo.</p>
   </div>
 </footer>
 
