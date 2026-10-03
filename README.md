@@ -8,6 +8,6 @@ GitHub Pages en estudiodemovimiento.es.
 del enlace), pero la página lleva `<meta name="robots" content="noindex">`: Google no la indexa.
 El WhatsApp de todos los botones es la línea del Estudio, +34 722 814 010.
 
-Fuente: `../venta-v2/`. Para publicar, copiar `index.html` y las imágenes que usa a este repo.
+Fuente: `../venta-v2/`. Para publicar, copiar `index.html`, `og.jpg` (vista previa del enlace, ver `../venta-v2/og/LEEME.md`) y las imágenes que usa a este repo.
 Entre el 23-sep y el 3-oct-2026 estuvo cifrada (`contenido.bin` + pantalla de contraseña; ver
 commit 2849fc1 y `../venta-v2/publicar/`). Hasta el 23-sep-2026 era la «Serie Consciente» (commit 194aed2).
