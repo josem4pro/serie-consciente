@@ -4,8 +4,10 @@ Página de venta de la Technogym Kinesis Personal Heritage de Milagro Ortiz, pub
 GitHub Pages en estudiodemovimiento.es.
 
 **Desde el 3-oct-2026 la página está abierta**, sin contraseña, para empezar a mostrarla.
-`robots.txt` deja pasar a los rastreadores (para que WhatsApp e Instagram armen la vista previa
-del enlace), pero la página lleva `<meta name="robots" content="noindex">`: Google no la indexa.
+`robots.txt` deja pasar a los rastreadores y apunta a `sitemap.xml`. **Desde el 5-oct-2026 Google
+puede indexarla** (`index, follow`; antes llevaba `noindex`) y la página trae datos estructurados
+`Product` (precio, estado usado, disponibilidad) para el resultado enriquecido. Si cambia el precio,
+cambiarlo también en el bloque `ld+json` y en `lastmod` de `sitemap.xml`.
 El WhatsApp de todos los botones es la línea del Estudio, +34 722 814 010.
 
 Fuente: `../venta-v2/`. Para publicar, copiar `index.html`, `og.jpg` (vista previa del enlace, ver `../venta-v2/og/LEEME.md`) y las imágenes que usa a este repo.
