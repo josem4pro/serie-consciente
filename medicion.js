@@ -3,7 +3,7 @@
    Para activar el píxel de Meta, poner su ID en PIXEL. */
 (() => {
   const GA = 'G-58WX551YKL';
-  const PIXEL = '';
+  const PIXEL = '2166538794271971';
   const CLAVE = 'consentimiento-medicion';
 
   // Origen de la visita: utm_source, fbclid/gclid o el sitio de procedencia. Se recuerda durante la sesión.
