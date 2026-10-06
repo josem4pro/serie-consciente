@@ -345,6 +345,7 @@ footer{padding:60px 0 120px;background:var(--ink);border-top:1px solid var(--lin
 .emblema img{position:absolute}
 .emblema .anillo{inset:0;width:100%}
 .emblema .nombre{left:50%;top:50%;width:84%;transform:translate(-50%,-50%)}
+.legal a{text-decoration:underline;text-underline-offset:3px}
 .legal{margin-top:34px;padding-top:24px;border-top:1px solid var(--linea);font-size:13px;color:rgba(245,241,234,.45);line-height:1.7}
 @media(max-width:760px){.pie-grid{grid-template-columns:1fr}}
 
@@ -363,6 +364,7 @@ footer{padding:60px 0 120px;background:var(--ink);border-top:1px solid var(--lin
   .rev{opacity:1;transform:none}
 }
 </style>
+<script src="medicion.js"></script>
 </head>
 <body>
 
@@ -680,7 +682,7 @@ footer{padding:60px 0 120px;background:var(--ink);border-top:1px solid var(--lin
       <div class="emblema"><img class="anillo" src="img/anillo-oro.png" alt=""><img class="nombre" src="img/firma-oro.png" alt="Milagro Ortiz"></div>
       <div>Estudio de Movimiento · Milagro Ortiz<br>Las Caletillas, Candelaria, Tenerife<br>Teléfono y WhatsApp: <a href="tel:+34722814010">+34 722 814 010</a></div>
     </div>
-    <p class="legal">Actualizada el 1 de octubre de 2026. Venta de una unidad usada. Technogym, Kinesis y FullGravity son marcas de Technogym S.p.A.; esta página no está afiliada ni patrocinada por Technogym. El precio de lista es el de la máquina nueva en Technogym España (septiembre de 2026) y se cita como referencia. La imagen de catálogo se identifica como tal; el resto son fotos y vídeo de la unidad a la venta.</p>
+    <p class="legal"><a href="legal.html">Aviso legal, privacidad y cookies</a> · <a href="#" onclick="configurarCookies();return false">Configurar cookies</a><br>Actualizada el 1 de octubre de 2026. Venta de una unidad usada. Technogym, Kinesis y FullGravity son marcas de Technogym S.p.A.; esta página no está afiliada ni patrocinada por Technogym. El precio de lista es el de la máquina nueva en Technogym España (septiembre de 2026) y se cita como referencia. La imagen de catálogo se identifica como tal; el resto son fotos y vídeo de la unidad a la venta.</p>
   </div>
 </footer>
 
@@ -693,7 +695,13 @@ footer{padding:60px 0 120px;background:var(--ink);border-top:1px solid var(--lin
 (() => {
   const TEL = '34722814010';
   const wa = msg => `https://wa.me/${TEL}?text=${encodeURIComponent(msg)}`;
-  document.querySelectorAll('.js-wa').forEach(a => { a.href = wa(a.dataset.msg); a.target = '_blank'; a.rel = 'noopener'; });
+  const origen = () => (window.origenWhatsApp ? window.origenWhatsApp() : '');
+  const medir = u => window.medirContacto && window.medirContacto(u);
+  document.querySelectorAll('.js-wa').forEach((a, i) => {
+    a.href = wa(a.dataset.msg + origen()); a.target = '_blank'; a.rel = 'noopener';
+    const u = a.closest('section, footer, .barra-movil');
+    a.addEventListener('click', () => medir((u && (u.id || u.className.split(' ')[0])) || 'boton-' + i));
+  });
 
   document.getElementById('form').addEventListener('submit', e => {
     e.preventDefault();
@@ -707,7 +715,8 @@ footer{padding:60px 0 120px;background:var(--ink);border-top:1px solid var(--lin
       `Para: ${v('tipo')}`,
       `Me interesa: ${v('interes')}`
     ].filter(Boolean);
-    window.open(wa(lineas.join('\n')), '_blank', 'noopener');
+    medir('formulario');
+    window.open(wa(lineas.join('\n') + origen()), '_blank', 'noopener');
   });
 
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
