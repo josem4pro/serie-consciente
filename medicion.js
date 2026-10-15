@@ -1,16 +1,21 @@
 /* Medición con consentimiento (GA4 + píxel de Meta) y origen de cada WhatsApp.
+   Habla el idioma de la página (<html lang>): español en / y en legal.html, inglés en /en/.
    Nada se carga ni se guarda en cookies hasta que el visitante pulsa «Aceptar».
    Para activar el píxel de Meta, poner su ID en PIXEL. */
 (() => {
   const GA = 'G-58WX551YKL';
   const PIXEL = '2166538794271971';
   const CLAVE = 'consentimiento-medicion';
+  const EN = /^en/i.test(document.documentElement.lang);
 
   // Origen de la visita: utm_source, fbclid/gclid o el sitio de procedencia. Se recuerda durante la sesión.
   const ORIGENES = {
     instagram: 'Instagram', facebook: 'Facebook', meta_ads: 'un anuncio de Facebook o Instagram', marketplace: 'Facebook Marketplace',
     tiktok: 'TikTok', youtube: 'YouTube', x: 'X', twitter: 'X', google: 'Google', google_ads: 'un anuncio de Google',
     whatsapp: 'WhatsApp', email: 'un correo', wallapop: 'Wallapop', dossier: 'el dossier'
+  };
+  const ORIGENES_EN = {
+    ...ORIGENES, meta_ads: 'a Facebook or Instagram ad', google_ads: 'a Google ad', email: 'an email', dossier: 'the brochure'
   };
   const leerOrigen = () => {
     const q = new URLSearchParams(location.search);
@@ -34,7 +39,9 @@
   const origen = leerOrigen();
 
   // El mensaje de WhatsApp lleva al final de dónde vino la persona, para saber qué canal funciona.
-  window.origenWhatsApp = () => ORIGENES[origen] ? ` (Os vi en ${ORIGENES[origen]}.)` : '';
+  window.origenWhatsApp = () => EN
+    ? (ORIGENES_EN[origen] ? ` (I found you via ${ORIGENES_EN[origen]}.)` : '')
+    : (ORIGENES[origen] ? ` (Os vi en ${ORIGENES[origen]}.)` : '');
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { dataLayer.push(arguments); };
@@ -58,7 +65,7 @@
   // Evento de contacto: lo llama la página al abrir WhatsApp. Sin consentimiento no se envía nada.
   window.medirContacto = (ubicacion) => {
     if (!activo) return;
-    gtag('event', 'click_whatsapp', { ubicacion, origen: origen || 'directo' });
+    gtag('event', 'click_whatsapp', { ubicacion, origen: origen || 'directo', idioma: EN ? 'en' : 'es' });
     gtag('event', 'generate_lead', { currency: 'EUR', value: 5300, ubicacion });
     if (window.fbq) fbq('track', 'Contact', { content_name: 'Technogym Kinesis Personal Heritage' });
   };
@@ -71,8 +78,11 @@
     const d = document.createElement('div');
     d.id = 'aviso-cookies';
     d.setAttribute('role', 'dialog');
-    d.setAttribute('aria-label', 'Cookies de medición');
-    d.innerHTML = `<p>Usamos cookies de medición (Google Analytics y Meta) solo si nos das permiso, para saber cuántas personas ven esta página y desde dónde llegan. <a href="legal.html#cookies">Más información</a></p>
+    d.setAttribute('aria-label', EN ? 'Analytics cookies' : 'Cookies de medición');
+    d.innerHTML = EN
+      ? `<p>We use analytics cookies (Google Analytics and Meta) only with your permission, to know how many people see this page and where they come from. <a href="legal.html#cookies">More information</a></p>
+      <div class="aviso-botones"><button type="button" data-v="no">Reject</button><button type="button" data-v="si">Accept</button></div>`
+      : `<p>Usamos cookies de medición (Google Analytics y Meta) solo si nos das permiso, para saber cuántas personas ven esta página y desde dónde llegan. <a href="legal.html#cookies">Más información</a></p>
       <div class="aviso-botones"><button type="button" data-v="no">Rechazar</button><button type="button" data-v="si">Aceptar</button></div>`;
     d.addEventListener('click', e => {
       const v = e.target.dataset && e.target.dataset.v; if (!v) return;

@@ -7,6 +7,9 @@
 <meta name="description" content="Technogym Kinesis Personal Heritage Black en venta en Tenerife. 5.300 € con el desmontaje y la instalación incluidos (precio de lista 12.750 €). Revisada por el servicio técnico oficial. Visita y prueba con cita previa.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://estudiodemovimiento.es/">
+<link rel="alternate" hreflang="es" href="https://estudiodemovimiento.es/">
+<link rel="alternate" hreflang="en" href="https://estudiodemovimiento.es/en/">
+<link rel="alternate" hreflang="x-default" href="https://estudiodemovimiento.es/">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -58,6 +61,7 @@
 </script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
 <meta property="og:site_name" content="Estudio de Movimiento · Milagro Ortiz">
 <meta property="og:title" content="Technogym Kinesis Personal Heritage · 5.300 € · Tenerife">
 <meta property="og:description" content="Una unidad disponible en Tenerife. Desmontaje e instalación incluidos. Precio de lista 12.750 €. Visita y prueba con cita previa.">
@@ -137,7 +141,18 @@ h2.titulo{font-size:clamp(42px,5.6vw,84px)}
 .nav ul a:hover{opacity:1;color:var(--champ)}
 .nav .btn{padding:11px 20px;font-size:14px}
 .nav .corto{display:none}
-@media(max-width:1020px){.nav ul{display:none}}
+.nav-der{display:flex;align-items:center;gap:12px}
+.idiomas{display:flex;gap:2px;padding:3px;border-radius:100px;border:1px solid var(--linea);background:rgba(255,255,255,.03)}
+.idiomas a{display:inline-flex;align-items:center;gap:7px;padding:6px 11px 6px 6px;border-radius:100px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--texto-3);transition:background .2s,color .2s}
+.idiomas a:hover{color:var(--champ)}
+.idiomas a[aria-current]{background:rgba(207,183,135,.18);color:var(--champ-2)}
+.idiomas svg{width:20px;height:20px;border-radius:50%;flex:none;box-shadow:0 0 0 1px rgba(245,241,234,.3)}
+.idiomas a[aria-current] svg{box-shadow:0 0 0 2px var(--champ)}
+@media(max-width:1220px){.nav ul{gap:20px;font-size:14.5px}}
+@media(max-width:1120px){.nav ul{display:none}}
+@media(max-width:560px){.nav{gap:8px;padding-right:7px}.nav-der{gap:5px}.idiomas{padding:2px}.idiomas a{padding:4px}.idiomas a span{display:none}.nav .btn{padding:10px 14px;font-size:13.5px}.nav .btn .flecha{display:none}}
+@media(max-width:400px){.nav .marca-n{font-size:17.5px}.nav .marca-l{font-size:7px}nav.nav{padding-left:14px}}
+@media(max-width:340px){.nav .marca-n{font-size:15px}.nav .marca-l{letter-spacing:.5em}}
 @media(max-width:560px){.marca-n{font-size:20px}.marca-l{font-size:7.5px}.nav{padding-left:18px}.nav .btn .largo{display:none}.nav .corto{display:inline}}
 
 /* ---------- HERO ---------- */
@@ -378,7 +393,10 @@ footer{padding:60px 0 120px;background:var(--ink);border-top:1px solid var(--lin
     <li><a href="#entrega">Entrega</a></li>
     <li><a href="#precio">Precio</a></li>
   </ul>
-  <a class="btn btn-oro" href="#precio"><span class="largo">Agendar visita</span><span class="corto">Visita</span> <span class="flecha">→</span></a>
+  <div class="nav-der">
+    <div class="idiomas" role="group" aria-label="Idioma · Language"><a href="./" hreflang="es" lang="es" title="Español" aria-current="page"><svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="3" height="2" fill="#AA151B"/><rect y=".5" width="3" height="1" fill="#F1BF00"/></svg><span>ES</span></a><a href="en/" hreflang="en" lang="en" title="English"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="uk-t"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span>EN</span></a></div>
+    <a class="btn btn-oro" href="#precio"><span class="largo">Agendar visita</span><span class="corto">Visita</span> <span class="flecha">→</span></a>
+  </div>
 </nav>
 
 <!-- HERO -->
