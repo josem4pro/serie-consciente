@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Eutonía aplicada · Curso de 8 semanas · Estudio de Movimiento</title>
+<meta name="description" content="Curso presencial de eutonía aplicada con Milagro Ortiz: ocho semanas de presencia, tono justo y movimiento.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://estudiodemovimiento.es/curso-eutonia-aplicada/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Estudio de Movimiento · Milagro Ortiz">
+<meta property="og:title" content="Eutonía aplicada · Curso de 8 semanas con Milagro Ortiz">
+<meta property="og:description" content="Presencia, tono justo y un movimiento que nace de adentro. Curso presencial en el Estudio de Movimiento, Tenerife. Ocho plazas.">
+<meta property="og:url" content="https://estudiodemovimiento.es/curso-eutonia-aplicada/">
+<meta property="og:image" content="https://estudiodemovimiento.es/curso-eutonia-aplicada/og.jpg">
+<meta property="og:image:secure_url" content="https://estudiodemovimiento.es/curso-eutonia-aplicada/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Eutonía aplicada: el título del curso junto al emblema de Milagro Ortiz y el banderín del Estudio de Movimiento.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eutonía aplicada · Curso de 8 semanas con Milagro Ortiz">
+<meta name="twitter:description" content="Presencia, tono justo y un movimiento que nace de adentro. Curso presencial en el Estudio de Movimiento, Tenerife. Ocho plazas.">
+<meta name="twitter:image" content="https://estudiodemovimiento.es/curso-eutonia-aplicada/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css?v=1">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="brillo" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+</svg>
+
+<header>
+  <a class="marca" href="#arriba" aria-label="Estudio de Movimiento">
+    <span>Estudio de Movimiento</span>
+  </a>
+  <div class="der">
+    <button class="sonido" id="sonido" aria-pressed="false" aria-label="Activar o apagar el sonido"><i><b></b><b></b><b></b><b></b></i><span>Sonido</span></button>
+    <a class="eutonia" href="#sesiones">Euton<b>IA</b></a>
+  </div>
+</header>
+
+<main id="arriba">
+
+<!-- =================== HÉROE =================== -->
+<div class="heroe">
+  <canvas id="tono" aria-hidden="true"></canvas>
+  <a class="banderin" id="banderin" href="#arriba" aria-label="Estudio de Movimiento"><span style="--i:0">E</span><span style="--i:1">S</span><span style="--i:2">T</span><span style="--i:3">U</span><span style="--i:4">D</span><span style="--i:5">I</span><span style="--i:6">O</span><span class="hueco"></span><span style="--i:7">D</span><span style="--i:8">E</span><span class="hueco"></span><span class="st" style="--i:9">M</span><span class="st" style="--i:10">O</span><span class="st" style="--i:11">V</span><span class="st" style="--i:12">I</span><span class="st" style="--i:13">M</span><span class="st" style="--i:14">I</span><span class="st" style="--i:15">E</span><span class="st" style="--i:16">N</span><span class="st" style="--i:17">T</span><span class="st" style="--i:18">O</span></a>
+  <div class="caja">
+    <p class="rot sube">Curso presencial · ocho semanas · con Milagro Ortiz</p>
+    <h1 class="sube">Eutonía <i>aplicada</i></h1>
+    <p class="sub sube">Presencia, <em class="lav">tono justo</em> y un movimiento que nace de adentro. Sin gimnasia, sin forzar: sintiendo.</p>
+    <div class="datos sube">
+      <div><b>8</b>semanas</div>
+      <div><b>2 h 30</b>cada sesión</div>
+      <div><b>8</b>plazas</div>
+      <div><b>20 h</b>con certificado</div>
+      <div><b>Tenerife</b>en el estudio</div>
+    </div>
+    <button class="invita sube" id="invita">Escuchar la página</button>
+    <span class="sello" id="sello" title="Milagro Ortiz">
+      <svg viewBox="-60 -60 720 699" role="img" aria-label="Emblema de Milagro Ortiz">
+        <defs>
+          <mask id="mLila" maskUnits="userSpaceOnUse" x="-60" y="-60" width="720" height="699"><path class="pm pl" d="M277.2,29 A262,262 0 1 0 550.6,366.6" pathLength="1" fill="none" stroke="#fff" stroke-width="190"/></mask>
+          <mask id="mOro" maskUnits="userSpaceOnUse" x="-60" y="-60" width="720" height="699"><path class="pm po" d="M52.3,204.7 A262,262 0 1 1 322.8,551" pathLength="1" fill="none" stroke="#fff" stroke-width="190"/></mask>
+          <linearGradient id="gFirma" x1="0" x2="1"><stop offset="0" stop-color="#fff"/><stop offset=".8" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <mask id="mFirma" maskUnits="userSpaceOnUse" x="0" y="225" width="600" height="130"><rect class="fm" x="30" y="228" width="660" height="124" fill="url(#gFirma)"/></mask>
+        </defs>
+        <circle class="pulso" cx="300" cy="290" r="262"/><circle class="pulso b" cx="300" cy="290" r="262"/>
+        <g class="giro gl"><image href="img/arco-lila.png" width="600" height="579" mask="url(#mLila)"/></g>
+        <g class="giro go"><image href="img/arco-oro.png" width="600" height="579" mask="url(#mOro)"/></g>
+        <image href="img/firma-oro.png" x="48" y="248.4" width="504" height="82.3" mask="url(#mFirma)"/>
+        <g class="punta tl"><circle r="8"/><circle r="5"/><circle r="3"/></g>
+        <g class="punta to"><circle r="8"/><circle r="5"/><circle r="3"/></g>
+      </svg>
+    </span>
+  </div>
+  <span class="baja"></span>
+</div>
+
+<!-- =================== PROMESA =================== -->
+<section class="promesa" id="promesa">
+  <div class="ancho">
+    <blockquote class="ver">«Mediante el movimiento que se practica en la eutonía desarrollamos <b>el mundo interior, la presencia y la belleza</b>.»
+      <cite class="rot">Gerda Alexander · «La eutonía»</cite>
+    </blockquote>
+    <svg id="linea" viewBox="0 0 1400 220" preserveAspectRatio="none" aria-hidden="true">
+      <polyline id="trazo" fill="none" stroke="#C9B6E4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="url(#brillo)" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <div class="polos"><span class="rot">La tensión que sobra</span><span class="rot lav">El tono justo</span></div>
+
+    <div class="dos">
+      <div class="ver">
+        <span class="rot">Qué es</span>
+        <p><em>Eu</em>, armonía. <em>Tonos</em>, tensión. La eutonía, creada por Gerda Alexander, te enseña a encontrar en cada momento la tensión exacta que pide lo que haces: ni rigidez ni flojedad. Lo demás es esfuerzo que te sobra.</p>
+      </div>
+      <div class="ver">
+        <span class="rot">Para quién</span>
+        <p>Para cualquier persona. No hace falta experiencia, ni flexibilidad, ni estar en forma. Y si ya conoces la eutonía, para ir más hondo. Como dice Milagro: está pensada <em class="lav">«no para el profesional, sino para la persona»</em>.</p>
+      </div>
+      <div class="ver">
+        <span class="rot">Cómo</span>
+        <p>En grupo pequeño y en presencia, porque aquí se trabaja con los otros: el suelo, los objetos, el contacto. Ocho de cada diez minutos son experiencia. La teoría llega después de haberlo sentido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SESIONES =================== -->
+<section class="sesiones" id="sesiones">
+  <div class="ancho">
+    <div class="cab ver">
+      <h2>Ocho semanas,<br><i>ocho descubrimientos</i></h2>
+      <p>Cada sesión despierta un principio de la eutonía. Ninguno falta. Y cada uno se apoya en el anterior.</p>
+    </div>
+
+    <!-- 1 -->
+    <article class="sesion" id="s1">
+      <div class="escena ver" data-pie="piel · tacto · pasividad">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <line class="f" x1="30" y1="211" x2="370" y2="211"/>
+          <path class="onda" d="M60,211 A140,22 0 0 0 340,211"/><path class="onda" d="M60,211 A140,22 0 0 0 340,211"/><path class="onda" d="M60,211 A140,22 0 0 0 340,211"/>
+          <circle class="l" cx="80" cy="192" r="13"/>
+          <path class="l" d="M95,196 L192,200 L262,198 L330,202 L337,187"/>
+          <path class="l" d="M106,197 L152,205 L198,206"/>
+          <path class="g piel" pathLength="1" d="M58,192 C58,166 94,166 103,179 C150,179 205,183 262,181 C300,181 320,178 340,169 C353,170 354,194 347,205 C342,211 322,209 300,209 L84,209 C64,209 58,202 58,192 Z"/>
+          <circle class="gd" r="3.6"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.85;1" path="M58,192 C58,166 94,166 103,179 C150,179 205,183 262,181 C300,181 320,178 340,169 C353,170 354,194 347,205 C342,211 322,209 300,209 L84,209 C64,209 58,202 58,192 Z"/></circle>
+          <g class="peso" fill="none" stroke="#C9B6E4" stroke-width="1.4" stroke-linecap="round">
+            <path d="M75,222 l5,5 l5,-5"/><path d="M140,222 l5,5 l5,-5"/><path d="M190,222 l5,5 l5,-5"/><path d="M325,222 l5,5 l5,-5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">1</span>
+        <h3>La piel y el peso<i>El despertar del descanso consciente</i></h3>
+        <p>Tu piel es el borde donde terminas tú y empieza el mundo. La despertamos entera, y dejas que el suelo te sostenga.</p>
+        <span class="rot">Primera semana</span>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="sesion" id="s2">
+      <div class="escena ver" data-pie="espacio interno · volumen">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <line class="f" x1="30" y1="216" x2="370" y2="216"/>
+          <g class="respira">
+            <circle class="l" cx="200" cy="62" r="14"/>
+            <path class="l" d="M176,92 C166,118 168,160 178,188 M224,92 C234,118 232,160 222,188 M176,92 C186,84 214,84 224,92"/>
+            <path class="l" d="M178,188 C150,186 132,198 138,214 M222,188 C250,186 268,198 262,214 M150,214 C170,202 190,204 200,210 C210,204 230,202 250,214"/>
+            <g class="g" style="stroke-width:1.3">
+              <ellipse cx="200" cy="124" rx="19" ry="24"><animate attributeName="rx" values="19;2;19" dur="5s" repeatCount="indefinite"/></ellipse>
+              <ellipse cx="200" cy="124" rx="19" ry="24"><animate attributeName="ry" values="24;3;24" dur="7s" repeatCount="indefinite"/></ellipse>
+              <ellipse cx="200" cy="124" rx="19" ry="24" opacity=".45"/>
+              <ellipse cx="200" cy="170" rx="17" ry="11"><animate attributeName="rx" values="17;2;17" dur="6s" repeatCount="indefinite"/></ellipse>
+              <ellipse cx="200" cy="170" rx="17" ry="11"><animate attributeName="ry" values="11;1.5;11" dur="4.4s" repeatCount="indefinite"/></ellipse>
+              <ellipse cx="200" cy="170" rx="17" ry="11" opacity=".45"/>
+              <circle cx="200" cy="62" r="7"><animate attributeName="r" values="4;9;4" dur="5.5s" repeatCount="indefinite"/></circle>
+            </g>
+            <circle class="gd" r="2"><animateMotion dur="5s" repeatCount="indefinite" path="M181,124 a19,24 0 1,0 38,0 a19,24 0 1,0 -38,0"/></circle>
+            <circle class="gd" r="1.6"><animateMotion dur="6.5s" repeatCount="indefinite" path="M217,170 a17,11 0 1,1 -34,0 a17,11 0 1,1 34,0"/></circle>
+          </g>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">2</span>
+        <h3>Habitar el interior<i>Volumen y tres dimensiones</i></h3>
+        <p>Tu cuerpo no es una superficie: tiene volumen. Lo recorres por dentro, y la respiración se suelta sola.</p>
+        <span class="rot">Segunda semana</span>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="sesion" id="s3">
+      <div class="escena ver" data-pie="conciencia de los huesos">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <line class="f" x1="30" y1="217" x2="370" y2="217"/>
+          <g fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+            <g class="hueso b1"><path d="M186,188 L185,213 L175,216"/><path d="M214,188 L215,213 L225,216"/></g>
+            <g class="hueso b2"><path d="M190,158 L186,184"/><path d="M210,158 L214,184"/><circle cx="186" cy="186" r="2"/><circle cx="214" cy="186" r="2"/></g>
+            <g class="hueso b3"><path d="M184,152 C178,141 196,139 200,149 C204,139 222,141 216,152 C213,161 204,160 200,155 C196,160 187,161 184,152 Z"/></g>
+            <g class="hueso b4"><path d="M200,82 L200,146" stroke-dasharray=".1 6.2" stroke-width="5"/>
+              <path d="M200,96 C186,93 176,98 178,106 M200,105 C185,102 175,107 177,115 M200,114 C186,111 177,116 179,124 M200,123 C188,121 181,125 183,131" stroke-width="1.8"/>
+              <path d="M200,96 C214,93 224,98 222,106 M200,105 C215,102 225,107 223,115 M200,114 C214,111 223,116 221,124 M200,123 C212,121 219,125 217,131" stroke-width="1.8"/></g>
+            <g class="hueso b5"><path d="M200,86 L175,90 M200,86 L225,90"/><path d="M174,92 L168,124 M168,128 L164,156"/><path d="M226,92 L232,124 M232,128 L236,156"/><circle cx="168" cy="126" r="1.6"/><circle cx="232" cy="126" r="1.6"/></g>
+            <g class="hueso b6"><circle cx="200" cy="62" r="13"/><path d="M192,71 C196,78 204,78 208,71"/></g>
+          </g>
+          <path class="m cana" d="M118,240 L170,218"/>
+          <circle class="toque" cx="178" cy="216" r="6"/>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">3</span>
+        <h3>El sostén profundo<i>Despertar la estructura ósea</i></h3>
+        <p>Los huesos sostienen; los músculos descansan. Un toque en el talón y la vibración te recorre hasta la cabeza. Aprendes a confiar en tu esqueleto.</p>
+        <span class="rot">Tercera semana</span>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="sesion" id="s4">
+      <div class="escena ver" data-pie="micromovimientos · intención">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <circle class="t gira" cx="206" cy="132" r="62" stroke-dasharray="2 9"/>
+          <circle class="g espacio" cx="206" cy="132" r="16" style="stroke-width:1"/><circle class="g espacio" cx="206" cy="132" r="16" style="stroke-width:1"/><circle class="g espacio" cx="206" cy="132" r="16" style="stroke-width:1"/>
+          <g>
+            <path d="M92,42 L186,116" stroke="#F5F1EA" stroke-width="22" stroke-linecap="round"/><path d="M92,42 L186,116" stroke="#121114" stroke-width="17.5" stroke-linecap="round"/>
+            <circle cx="190" cy="119" r="15" fill="#121114" stroke="#F5F1EA" stroke-width="2.2"/>
+          </g>
+          <g class="tibia">
+            <path d="M226,148 L318,222" stroke="#F5F1EA" stroke-width="20" stroke-linecap="round"/><path d="M226,148 L318,222" stroke="#121114" stroke-width="15.5" stroke-linecap="round"/>
+            <path class="l" d="M208,150 C214,138 232,136 240,146"/>
+          </g>
+          <circle class="gd" cx="206" cy="134" r="2.4"><animate attributeName="r" values="1.5;4;1.5" dur="3s" repeatCount="indefinite"/></circle>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">4</span>
+        <h3>Espacio en las articulaciones<i>La micro-movilidad</i></h3>
+        <p>Movimientos tan pequeños que casi no se ven. Con ellos, cada articulación recupera su espacio y los tejidos vuelven a deslizarse.</p>
+        <span class="rot">Cuarta semana</span>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="sesion" id="s5">
+      <div class="escena ver" data-pie="empuje · transporte">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <line class="f" x1="30" y1="216" x2="370" y2="216"/>
+          <g class="crece">
+            <circle class="l" cx="200" cy="62" r="13"/>
+            <path class="l" d="M200,78 L200,150 M178,90 L222,90 M186,150 L214,150"/>
+            <path class="l" d="M188,150 L186,183 L185,214 M212,150 L214,183 L215,214"/>
+            <path class="l" d="M178,90 L172,122 L170,152 M222,90 L228,122 L230,152"/>
+            <path class="g sube5" pathLength="1" d="M185,214 L186,183 L188,150 L200,146 L200,78 L200,22"/>
+            <path class="g sube5" pathLength="1" d="M215,214 L214,183 L212,150 L200,146 L200,78 L200,22"/>
+          </g>
+          <circle class="g corona" cx="200" cy="34" r="9" style="stroke-width:1"/>
+          <g class="empuja" fill="none" stroke="#C08A4E" stroke-width="1.6" stroke-linecap="round">
+            <path d="M178,224 l7,7 l7,-7"/><path d="M208,224 l7,7 l7,-7"/>
+          </g>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">5</span>
+        <h3>La fuerza sin esfuerzo<i>El empuje y el transporte</i></h3>
+        <p>Empujas el suelo y el suelo te devuelve hacia arriba, hueso a hueso. Tu columna se endereza sola y tú te sientes más ligero.</p>
+        <span class="rot">Quinta semana</span>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="sesion" id="s6">
+      <div class="escena ver" data-pie="posiciones de control">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <line class="f" x1="30" y1="216" x2="370" y2="216"/>
+          <!-- posturas: talones · pliegue · cuclillas -->
+          <circle class="l" r="13" cx="170" cy="88">
+            <animate attributeName="cx" dur="12s" repeatCount="indefinite" values="170;170;262;262;170;170;206;206;170" keyTimes="0;.14;.25;.42;.53;.6;.72;.9;1" calcMode="spline" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"/>
+            <animate attributeName="cy" dur="12s" repeatCount="indefinite" values="88;88;196;196;88;88;92;92;88" keyTimes="0;.14;.25;.42;.53;.6;.72;.9;1" calcMode="spline" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"/>
+          </circle>
+          <path class="l" d="M168,104 L162,192 L222,212 L152,213">
+            <animate attributeName="d" dur="12s" repeatCount="indefinite" keyTimes="0;.14;.25;.42;.53;.6;.72;.9;1" calcMode="spline" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"
+              values="M168,104 L162,192 L222,212 L152,213;M168,104 L162,192 L222,212 L152,213;M246,186 L166,186 L222,212 L152,213;M246,186 L166,186 L222,212 L152,213;M168,104 L162,192 L222,212 L152,213;M168,104 L162,192 L222,212 L152,213;M202,108 L176,186 L232,166 L204,213;M202,108 L176,186 L232,166 L204,213;M168,104 L162,192 L222,212 L152,213"/>
+          </path>
+          <path class="l" d="M168,112 L180,150 L204,190">
+            <animate attributeName="d" dur="12s" repeatCount="indefinite" keyTimes="0;.14;.25;.42;.53;.6;.72;.9;1" calcMode="spline" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"
+              values="M168,112 L180,150 L204,190;M168,112 L180,150 L204,190;M240,190 L276,204 L312,211;M240,190 L276,204 L312,211;M168,112 L180,150 L204,190;M168,112 L180,150 L204,190;M202,116 L232,128 L262,136;M202,116 L232,128 L262,136;M168,112 L180,150 L204,190"/>
+          </path>
+          <path class="g" style="stroke-width:1.2" d="M168,104 L162,192" opacity=".9">
+            <animate attributeName="d" dur="12s" repeatCount="indefinite" keyTimes="0;.14;.25;.42;.53;.6;.72;.9;1" calcMode="spline" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"
+              values="M168,104 L162,192;M168,104 L162,192;M246,186 L166,186;M246,186 L166,186;M168,104 L162,192;M168,104 L162,192;M202,108 L176,186;M202,108 L176,186;M168,104 L162,192"/>
+          </path>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">6</span>
+        <h3>Escucha y límites<i>Las posiciones de autoobservación</i></h3>
+        <p>Posturas sencillas, las de un niño que juega, para saber dónde estás hoy. No se fuerza nada: se observa, y el cuerpo se regula.</p>
+        <span class="rot">Sexta semana</span>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="sesion" id="s7">
+      <div class="escena ver" data-pie="contacto">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <line class="f" x1="30" y1="216" x2="370" y2="216"/>
+          <circle class="aura" cx="122" cy="132" r="66" style="transform-origin:122px 132px"/><circle class="aura b" cx="122" cy="132" r="66" style="transform-origin:122px 132px"/>
+          <circle class="aura" cx="278" cy="132" r="66" style="transform-origin:278px 132px;animation-delay:1.2s"/><circle class="aura b" cx="278" cy="132" r="66" style="transform-origin:278px 132px;animation-delay:3.7s"/>
+          <g>
+            <circle class="l" cx="122" cy="62" r="13"/>
+            <path class="l" d="M122,78 L122,150 M100,90 L144,90 M108,150 L136,150 M110,150 L108,183 L107,214 M134,150 L136,183 L137,214 M100,90 L94,122 L92,152"/>
+            <path class="l" d="M144,90 L162,106 L178,110"/>
+          </g>
+          <g>
+            <circle class="l" cx="278" cy="62" r="13"/>
+            <path class="l" d="M278,78 L278,150 M256,90 L300,90 M264,150 L292,150 M266,150 L264,183 L263,214 M290,150 L292,183 L293,214 M300,90 L306,122 L308,152"/>
+            <path class="l" d="M256,90 L238,106 L222,110"/>
+          </g>
+          <path class="m" d="M178,110 L222,110"/>
+          <path d="M190,106 v8 M210,106 v8" stroke="#101010" stroke-width="1.2"/>
+          <circle class="gd" r="3"><animateMotion dur="2.6s" repeatCount="indefinite" path="M122,90 L144,90 L162,106 L178,110 L222,110 L238,106 L256,90 L278,90"/></circle>
+          <circle class="gd" r="2.2" opacity=".8"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" path="M278,90 L256,90 L238,106 L222,110 L178,110 L162,106 L144,90 L122,90"/></circle>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">7</span>
+        <h3>La presencia compartida<i>El contacto con el mundo</i></h3>
+        <p>Tocar y dejarse tocar: una caña de bambú, un compañero, el espacio que te rodea. Llegas al otro sin perderte a ti.</p>
+        <span class="rot">Séptima semana</span>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="sesion" id="s8">
+      <div class="escena ver" data-pie="movimiento eutónico">
+        <svg class="e" viewBox="0 0 400 260" aria-hidden="true">
+          <line class="f" x1="30" y1="216" x2="370" y2="216"/>
+          <path class="estela c" pathLength="1" d="M34,196 C110,96 180,250 252,150 C300,84 340,120 372,56"/>
+          <path class="estela b" pathLength="1" d="M132,40 C82,76 92,128 122,112 C150,96 150,60 170,30 C200,10 220,14 232,30 C250,56 300,60 262,36"/>
+          <path class="estela" pathLength="1" d="M270,128 C318,96 300,50 262,36 C230,24 210,60 244,66 C276,72 300,84 280,90"/>
+          <path class="l" d="M188,152 L186,183 L185,214"/>
+          <path class="l" d="M212,152 L216,183 L215,214">
+            <animate attributeName="d" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"
+              values="M212,152 L216,183 L215,214;M212,152 L238,174 L254,202;M212,152 L216,183 L215,214;M212,152 L230,182 L246,210;M212,152 L216,183 L215,214"/>
+          </path>
+          <g class="mece">
+            <path class="l" d="M186,152 L214,152 M200,152 L200,78 M178,92 L222,92"/>
+            <circle class="l" cx="200" cy="62" r="13"/>
+            <path class="l" d="M178,92 L150,70 L132,40">
+              <animate attributeName="d" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"
+                values="M178,92 L150,70 L132,40;M178,92 L148,104 L120,112;M178,92 L158,62 L170,30;M178,92 L150,110 L140,140;M178,92 L150,70 L132,40"/>
+            </path>
+            <path class="l" d="M222,92 L246,112 L270,128">
+              <animate attributeName="d" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"
+                values="M222,92 L246,112 L270,128;M222,92 L240,66 L262,36;M222,92 L244,62 L232,30;M222,92 L250,96 L280,90;M222,92 L246,112 L270,128"/>
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="texto ver">
+        <span class="num">8</span>
+        <h3>El movimiento eutónico<i>Agilidad, fluidez y libertad</i></h3>
+        <p>Todo lo anterior, junto y en movimiento. Dibujas en el espacio con tu cuerpo entero: ágil, fluido, tuyo.</p>
+        <span class="rot">Octava semana</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- =================== SESIÓN TIPO =================== -->
+<section class="tipo" id="tipo">
+  <div class="ancho">
+    <h2 class="ver">Dos horas y media <i>para sentir</i></h2>
+    <div class="barra ver" id="barra">
+      <div style="flex-grow:15"></div><div style="flex-grow:60"></div><div style="flex-grow:10"></div><div style="flex-grow:35"></div><div class="pal" style="flex-grow:30"></div>
+    </div>
+    <div class="leyenda">
+      <div style="flex-grow:15"><small>15 MIN</small>Llegar al suelo</div>
+      <div style="flex-grow:60"><small>60 MIN</small>Explorar: piel, huesos, espacio</div>
+      <div style="flex-grow:10"><small>10</small>Pausa</div>
+      <div style="flex-grow:35"><small>35 MIN</small>Moverse</div>
+      <div style="flex-grow:30"><small class="lav">30 MIN</small>Compartir y entender</div>
+    </div>
+    <div class="ochenta">
+      <div class="ver"><b>80<sup>%</sup></b><p>Experiencia. En el suelo, de pie, solo, en pareja, en grupo. Con bambúes, pelotas y tus propias manos.</p></div>
+      <div class="ver"><b>20<sup>%</sup></b><p>Palabras. Las justas, en lenguaje sencillo y siempre después de haberlo vivido.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== DESPUÉS =================== -->
+<section class="despues" id="despues">
+  <div class="ancho">
+    <span class="rot lav ver">La teoría</span>
+    <blockquote class="ver">«No antes,<br><span>sino después.»</span></blockquote>
+    <p class="ver">Durante el curso no hay apuntes. Primero va tu experiencia, sin ideas que te digan lo que tendrías que sentir. Al terminar, te llevas todo.</p>
+    <div class="tres">
+      <div class="ver"><span class="rot lav">Al final</span><h4>El texto del curso</h4><p>Lo que viviste, sesión por sesión, con su base científica: el tono, los reflejos, la fascia, el cerebro que aprende.</p></div>
+      <div class="ver"><span class="rot lav">Para casa</span><h4>Imágenes y audios</h4><p>Algunas prácticas grabadas con la voz de Milagro, para repetirlas cuando quieras.</p></div>
+      <div class="ver"><span class="rot lav">Para tu camino</span><h4>Certificado de 20 horas</h4><p>De asistencia a un curso de eutonía. Si un día quieres formarte como eutonista, cuentan como prácticas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PLAZAS =================== -->
+<section id="plazas">
+  <div class="ancho plazas">
+    <svg class="ver" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#D8D2C8" stroke-width=".6" stroke-dasharray="1 7" opacity=".5"/>
+      <g id="colchonetas"></g>
+      <text x="200" y="196" text-anchor="middle" font-family="Cormorant Garamond,serif" font-style="italic" font-weight="300" font-size="74" fill="#F5F1EA">8</text>
+      <text x="200" y="226" text-anchor="middle" font-family="Jost*,Jost,sans-serif" font-size="10" letter-spacing="4" fill="#C9B6E4">PLAZAS</text>
+    </svg>
+    <div class="ver">
+      <span class="rot">Grupo pequeño</span>
+      <h2>Un círculo de <i>ocho</i></h2>
+      <ul class="lista">
+        <li><span>Duración</span><span>8 semanas · una sesión por semana</span></li>
+        <li><span>Sesión</span><span>2 horas y media</span></li>
+        <li><span>Lugar</span><span>En el estudio · Tenerife</span></li>
+        <li><span>Imparte</span><span>Milagro Ortiz, eutonista</span></li>
+        <li><span>Fechas</span><span><em class="lav">por anunciar</em></span></li>
+        <li><span>Precio</span><span><em class="lav">por anunciar</em></span></li>
+      </ul>
+      <a class="boton" href="https://wa.me/34610584116?text=Hola%2C%20Milagro.%20Quiero%20una%20plaza%20en%20el%20curso%20de%20Euton%C3%ADa%20aplicada." target="_blank" rel="noopener">Quiero una plaza</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== EL LEMA =================== -->
+<section class="lema-sec" id="lema">
+  <canvas id="milagro" aria-hidden="true"></canvas>
+  <h2 class="oculto">Feel the Miracle</h2>
+  <p class="rot lav arriba">Estudio de Movimiento</p>
+  <p class="abajo">Lo que pasa en una sesión no se explica. <b>Se siente.</b></p>
+</section>
+
+</main>
+
+<footer>
+  <div class="emblema"><img class="anillo" src="img/anillo-lila-oro.png" alt=""><img class="nombre" src="img/firma-oro.png" alt="Milagro Ortiz"></div>
+  <p class="rot">Estudio de Movimiento · estudiodemovimiento.com</p>
+  <small>Música: «Feel the Miracle» · los dibujos y la música son código</small>
+</footer>
+
+<script src="guion.js?v=1"></script>
+</body>
+</html>
